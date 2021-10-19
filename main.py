@@ -13,5 +13,8 @@ alphabet_dict = {row.letter: row.code for (index, row) in alphabet_data.iterrows
 user_word = input("Enter a word: ").upper()
 user_dict = list(user_word)
 # print(user_dict)
+for char in user_dict:
+    if char.isdigit():
+        raise ValueError("letters only please")
 answer = [alphabet_dict[letter] for letter in user_dict]
 print(answer)
